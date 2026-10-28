@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>For Aliza</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Mute button (appears after the first tap) -->
+  <button id="mute" aria-label="Mute or unmute" hidden>🔊 Sound on</button>
+
+  <!-- Screen 0: start -->
+  <section class="screen on" id="screen-start">
+    <h1>Hey Aliza 🐱</h1>
+    <p>A friend made this to cheer you up.<br>Turn your sound on.</p>
+    <button id="start">Tap to start 😊</button>
+  </section>
+
+  <!-- Screen 1: cat GIFs, one at a time -->
+  <section class="screen" id="screen-cats">
+    <div class="frame" id="frame">
+      <img id="cat" alt="A cute cat">
+    </div>
+    <p class="caption" id="caption"></p>
+    <p class="count" id="count"></p>
+    <button id="next">Next 😊</button>
+  </section>
+
+  <!-- Screen 2: song + encouragement message -->
+  <section class="screen" id="screen-message">
+    <div class="heart" aria-hidden="true">🌟</div>
+    <div id="message"></div>
+
+    <div id="ending">
+      <div class="big">SEND HUG TO YOU 🫂</div>
+      <button id="again">Watch again</button>
+    </div>
+  </section>
+
+  <!-- Music -->
+  <audio id="song"  src="assets/song.mp3"  preload="auto"></audio>
+  <audio id="funny" src="assets/yakety-sax.mp3"   preload="auto" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
